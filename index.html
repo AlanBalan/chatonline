@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat App</title>
+  <link rel="stylesheet" href="styleindex.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Tela de Login -->
+        <div id="login-form" class="form-container active">
+          <label for="email">Digite seu E-mail:</label>
+          <input id="email" type="email" placeholder="Email">
+          <label for="password">Digite sua Senha:</label>
+          <input id="password" type="password" placeholder="Senha">
+          <button onclick="login()"><i class="fas fa-lock"></i> Login</button>
+          <p>Não tem uma conta? <a href="#" onclick="showRegisterForm()">Registre-se</a></p>
+        </div>
+    
+        <!-- Tela de Registro -->
+        <div id="register-form" class="form-container register">
+          <label for="nome">Digite seu Usuário:</label>
+          <input id="nome" type="text" placeholder="Nome">
+          <label for="register-email">Digite seu E-mail:</label>
+          <input id="register-email" type="email" placeholder="Email">
+          <label for="register-password">Digite sua Senha: (Mínimo de 6 caracteres)</label>
+          <input id="register-password" type="password" placeholder="Senha">
+          <button onclick="register()"><i class="fas fa-user-check"></i> Registrar</button>
+          <p>Já tem uma conta? <a href="#" onclick="showLoginForm()">Faça Login</a></p>
+        </div>
+    </div>
+
+   <!-- <div id="chat" class="hidden">
+        <h2>Chat</h2>
+        <div id="messages"></div>
+        <input id="message" type="text" placeholder="Type a message">
+        <button onclick="sendMessage()">Send</button>
+        <button onclick="logout()">Logout</button>
+    </div> -->
+
+  <!-- Firebase Libraries -->
+  <script src="./scripts/hidden.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+  <script src="./scripts/login.js"></script>
+</body>
+</html>
